@@ -2,6 +2,7 @@
 {
   "name": "2c/custom-function",
   "title": "Custom function plugin",
+  "type": "wordpress-plugin",
   "description": "",
   "version": "0.1.0",
   "homepage": "https://github.com/CeciliaNatale/2c-wp-custom-function",
@@ -13,5 +14,6 @@
     "name": "Cecilia Natale",
     "email": "",
     "url": ""
-  }
+  }, 
+  "require": {}
 }
