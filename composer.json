@@ -12,8 +12,8 @@
   },
   "author": {
     "name": "Cecilia Natale",
-    "email": "",
-    "url": ""
+    "email": "info@cecilianatale.it",
+    "url": "http://www.cecilianatale.it"
   }, 
   "require": {
     "composer/installers": "~1.0"
