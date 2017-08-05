@@ -1,6 +1,6 @@
 
 {
-  "name": "2c/custom-function",
+  "name": "2c_wp_custom-function",
   "title": "Custom function plugin",
   "type": "wordpress-plugin",
   "description": "",
