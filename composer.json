@@ -1,16 +1,17 @@
 {
   "name": "CeciliaNatale/2c-wp-custom-function",
   "description": "custom function plugin",
+  "keywords": ["wordpress", "plugin"],
+  "homepage": "http://www.cecilianatale.it"
+  "authors": [
+    {
+      "name": "Cecilia Natale",
+      "email": "info@cecilianatale.it"
+    }
+  ],
   "type": "wordpress-plugin",
-  "author": {
-    "name": "Cecilia Natale",
-    "email": "info@cecilianatale.it",
-    "url": "http://www.cecilianatale.it"
-  },
   "require": {
-    "composer/installers": "~1.0",
-  },
-  "extra": {
-    "installer-name": "2c-wp-custom-function"
+    "php": ">=5.3.2",
+    "composer/installers": "v1.0.6",
   }
 }
