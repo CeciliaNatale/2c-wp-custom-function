@@ -5,10 +5,28 @@
  * Description: Custom functions that I use.
  * Author: Cecilia Natale
  * Author URI: http://www.cecilianatale.it
- * Version: 0.1.0
+ * Version: 0.3.0
  */
 
-// Put your code snippets below this line.
+
+/***************************************************************/
+/*											admin panel														*/
+/**************************************************************/
+add_action('admin_menu', '__2c_wp_custom_function_setup_menu');
+
+function __2c_wp_custom_function_setup_menu(){
+        add_menu_page( 'Custom Function plugin', 'Custom Function', 'update_core', 'custom-function-plugin', 'custom_function_admin_panel' );
+}
+
+
+function custom_function_admin_panel(){
+	//todo
+}
+
+
+/**************************************************************/
+/*										my custom Functions											*/
+/**************************************************************/
 
 /**
  * Enables the Excerpt meta box in Page edit screen.
@@ -53,3 +71,14 @@ function __2c_hide_update_notice_to_all_but_admin_users()
     }
 }
 add_action( 'admin_head', '__2c_hide_update_notice_to_all_but_admin_users', 1 );
+
+/**
+ * Activate WordPress Maintenance Mode
+ * @return [type] [description]
+ */
+function __2c_wp_maintenance_mode(){
+    if(!current_user_can('update_core')){
+        wp_die('<h1 style="color:red">Website under Maintenance</h1><br />We are performing scheduled maintenance. We will be back on-line shortly!');
+    }
+}
+//add_action('get_header', '__2c_wp_maintenance_mode');
