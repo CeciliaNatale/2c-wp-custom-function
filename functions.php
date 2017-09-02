@@ -55,9 +55,22 @@ function __2c_add_post_content($content) {
  * @return [type] [description]
  */
 function __2c_custom_admin_footer() {
-	echo '<a href="http://www.cecilianatale.it/" target="_blank" title="CeciliaNatale.it">Website Design by Cecilia Natale.it</a>';
+	echo '<span id="footer-thankyou">
+			Website Developed by <a href="http://www.cecilianatale.it/" target="_blank" title="CeciliaNatale.it">Cecilia Natale.it</a>
+		<span>';
 }
-add_filter('admin_footer_text', '__2c_custom_admin_footer');
+add_filter('admin_footer_text', '__2c_custom_admin_footer', 11);
+
+/**
+ * remove admin footer version
+ * @return [type] [description]
+ */
+function __2c_custom_admin_footer_version() {
+    remove_filter( 'update_footer', 'core_update_footer' ); 
+}
+add_action( 'admin_menu', '__2c_custom_admin_footer_version' );
+
+
 
 
 /**
